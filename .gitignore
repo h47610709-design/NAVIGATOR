@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+local.properties
+keystore.properties
+*.jks
+*.keystore
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# APK va build natijalari
+*.apk
+*.aab
+*.ap_
+*.dex
+output.json
+
+# Offline xarita fayllari (hajmi katta — repozitoriyga qo'shilmaydi)
+*.map
+*.poi
+app/src/main/assets/maps/
+
+# OS fayllari
+.DS_Store
+Thumbs.db

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- UzNav interfeysi 100% o'zbek tilida -->
+<resources>
+    <string name="app_name">UzNav</string>
+    <string name="app_full_name">UzNav — O\'zbek Navigator</string>
+
+    <!-- Asosiy ekran -->
+    <string name="qayerga_boramiz">Qayerga boramiz?</string>
+    <string name="manzilni_kiriting">Manzilni kiriting</string>
+    <string name="qayerga">Qayerga?</string>
+    <string name="uy">Uy</string>
+    <string name="ish">Ish</string>
+    <string name="sevimli_joylar">Sevimli joylar</string>
+    <string name="qidiruv_tarixi">Qidiruv tarixi</string>
+    <string name="xaritalar">Xaritalar</string>
+    <string name="sozlamalar">Sozlamalar</string>
+    <string name="menyu">Menyu</string>
+    <string name="mening_joylashuvim">Mening joylashuvim</string>
+    <string name="kattalashtirish">Kattalashtirish</string>
+    <string name="kichiklashtirish">Kichiklashtirish</string>
+    <string name="orqaga">Orqaga</string>
+    <string name="tozalash">Tozalash</string>
+    <string name="qoshish">Qo\'shish</string>
+    <string name="bekor_qilish">Bekor qilish</string>
+
+    <!-- Marshrut -->
+    <string name="marshrutni_boshlash">Marshrutni boshlash</string>
+    <string name="marshrutni_toxtatish">Marshrutni to\'xtatish</string>
+    <string name="marshrut_hisoblanmoqda">Marshrut hisoblanmoqda…</string>
+    <string name="qayta_marshrut_hisoblanmoqda">Qayta marshrut hisoblanmoqda…</string>
+    <string name="eng_tez">Eng tez</string>
+    <string name="eng_qisqa">Eng qisqa</string>
+    <string name="pullik_yolsiz">Pullik yo\'lsiz</string>
+    <string name="qolgan_masofa">Qolgan masofa</string>
+    <string name="qolgan_vaqt">Qolgan vaqt</string>
+    <string name="yetib_borish">Yetib borish</string>
+    <string name="tezlik_km_soat">km/soat</string>
+
+    <!-- Holatlar -->
+    <string name="gps_signali_topilmadi">GPS signali topilmadi</string>
+    <string name="internet_aloqasi_yoq">Internet aloqasi yo\'q</string>
+    <string name="xarita_yuklanmoqda">Xarita yuklanmoqda…</string>
+    <string name="xarita_yuklandi">Xarita yuklandi</string>
+    <string name="xarita_yuklanmagan">Xarita yuklanmagan</string>
+    <string name="manzilingizga_yetib_keldingiz">Manzilingizga yetib keldingiz</string>
+
+    <!-- Xaritalar ekrani -->
+    <string name="xaritani_yuklab_olish">Xaritani yuklab olish</string>
+    <string name="xarita_yangilash">Xarita yangilash</string>
+    <string name="yuklangan_xaritalar">Yuklangan xaritalar</string>
+    <string name="yangilanishni_tekshirish">Yangilanishni tekshirish</string>
+    <string name="ochirish">O\'chirish</string>
+
+    <!-- Sozlamalar ekrani -->
+    <string name="mavzu">Mavzu</string>
+    <string name="mavzu_tizim">Tizim bo\'yicha</string>
+    <string name="mavzu_yorug">Yorug\' rejim</string>
+    <string name="mavzu_tungi">Tungi rejim</string>
+    <string name="ovozli_yoriqnoma">Ovozli yo\'riqnoma</string>
+    <string name="ovozni_sinash">Ovozni sinash</string>
+    <string name="ovoz_sozlamalari">Tizim ovoz sozlamalari</string>
+    <string name="tezlik_ogohlantirishi">Tezlik cheklovidan oshganda ogohlantirish</string>
+    <string name="xarita_burilishi">Xarita harakat yo\'nalishi bo\'yicha burilsin</string>
+    <string name="ekran_yoniq">Navigatsiya paytida ekran o\'chmasin</string>
+    <string name="faqat_wifi">Xaritani faqat Wi-Fi orqali yuklash</string>
+    <string name="xaritalarni_boshqarish">Xaritalarni boshqarish</string>
+    <string name="ilova_haqida">Ilova haqida</string>
+</resources>

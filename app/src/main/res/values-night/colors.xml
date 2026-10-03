@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tungi rejim ranglari — kechasi haydash uchun ko'zni qamashtirmaydi -->
+<resources>
+    <color name="asosiy">#4FC3F7</color>
+    <color name="asosiy_toq">#0288D1</color>
+    <color name="qoshimcha">#4CAF93</color>
+    <color name="fon">#12161C</color>
+    <color name="fon_panel">#1C222B</color>
+    <color name="matn_asosiy">#ECEFF1</color>
+    <color name="matn_ikkilamchi">#B0BEC5</color>
+    <color name="ajratgich">#2C333D</color>
+
+    <color name="gps_yaxshi">#66BB6A</color>
+    <color name="gps_qidirilmoqda">#FFB74D</color>
+    <color name="gps_yoq">#EF5350</color>
+    <color name="tezlik_oshgan">#EF5350</color>
+    <color name="ogohlantirish">#FFB74D</color>
+</resources>

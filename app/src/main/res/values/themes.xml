@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Asosiy mavzu: kunduzgi va tungi rejimni avtomatik qo'llab-quvvatlaydi -->
+    <style name="Theme.UzNav" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/asosiy</item>
+        <item name="colorPrimaryDark">@color/asosiy_toq</item>
+        <item name="colorOnPrimary">@color/oq</item>
+        <item name="colorSecondary">@color/qoshimcha</item>
+        <item name="colorOnSecondary">@color/oq</item>
+        <item name="android:colorBackground">@color/fon</item>
+        <item name="colorSurface">@color/fon_panel</item>
+        <item name="colorOnSurface">@color/matn_asosiy</item>
+        <item name="android:textColorPrimary">@color/matn_asosiy</item>
+        <item name="android:textColorSecondary">@color/matn_ikkilamchi</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/fon_panel</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/fon_panel</item>
+    </style>
+
+    <!-- Panel (karta) uslubi -->
+    <style name="UzNav.Panel" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/fon_panel</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">6dp</item>
+    </style>
+
+    <!-- Yo'l-yo'riq matni (haydash paytida yaxshi o'qilsin) -->
+    <style name="UzNav.Katta" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/matn_asosiy</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UzNav.Oddiy" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/matn_ikkilamchi</item>
+    </style>
+</resources>

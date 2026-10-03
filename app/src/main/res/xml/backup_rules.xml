@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Faqat foydalanuvchi sozlamalari va sevimli joylari zaxiralanadi. -->
+<full-backup-content>
+    <include domain="sharedpref" path="." />
+    <include domain="file" path="uznav/" />
+    <exclude domain="file" path="maps/" />
+</full-backup-content>
