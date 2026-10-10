@@ -5,6 +5,10 @@ har bir to‘g‘ri javobda **🎆 salyut effekti**, batafsil natijalar va «Xat
 
 ## Ishga tushirish
 
+**Eng oson:** Windows’da `start.bat` ni ikki marta bosing, Linux/macOS’da `./start.sh`. Skript kutubxonalarni o‘rnatadi va birinchi marta tokenni so‘raydi.
+
+Qo‘lda:
+
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
