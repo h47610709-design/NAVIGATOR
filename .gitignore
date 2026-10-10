@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/
+navigator/assets/generated/
+.pytest_cache/
