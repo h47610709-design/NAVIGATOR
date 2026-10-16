@@ -39,7 +39,7 @@ class Config:
     def from_env(cls) -> "Config":
         effect = os.getenv("CELEBRATION_EFFECT_ID", DEFAULT_PARTY_EFFECT_ID).strip()
         return cls(
-            bot_token=os.getenv("BOT_TOKEN", "").strip(),
+            bot_token=os.getenv("BOT_TOKEN", "").strip().strip("\"'").strip(),
             db_path=os.getenv("DB_PATH", "data/navigator.db").strip(),
             admin_ids={int(x) for x in _csv(os.getenv("ADMIN_IDS")) if x.lstrip("-").isdigit()},
             sticker_set=os.getenv("CELEBRATION_STICKER_SET", "").strip(),

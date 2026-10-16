@@ -5,19 +5,39 @@ har bir to‘g‘ri javobda **🎆 salyut effekti**, batafsil natijalar va «Xat
 
 ## Ishga tushirish
 
-**Eng oson:** Windows’da `start.bat` ni ikki marta bosing, Linux/macOS’da `./start.sh`. Skript kutubxonalarni o‘rnatadi va birinchi marta tokenni so‘raydi.
+**Serverda 24/7 (bepul hosting):** batafsil yo‘riqnoma — [DEPLOY.md](DEPLOY.md). Qisqasi (Ubuntu server):
+
+```bash
+git clone https://github.com/h47610709-design/NAVIGATOR.git
+cd NAVIGATOR
+bash deploy/server.sh install     # token yashirin so'raladi, systemd xizmati yoqiladi
+bash deploy/server.sh logs        # loglar
+```
+
+**Kompyuterda:** Windows’da `start.bat`, Linux/macOS’da `./start.sh` (kutubxonalarni o‘rnatadi, tokenni so‘raydi).
 
 Qo‘lda:
-
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-cp .env.example .env        # BOT_TOKEN ni kiriting
-.venv/bin/python -m navigator
+cp .env.example .env              # BOT_TOKEN= qatoriga tokenni yozing (.env GitHub'ga yuklanmaydi)
+.venv/bin/python -m navigator     # asosiy ishga tushirish buyrug'i
+.venv/bin/python -m navigator --check   # konfiguratsiya va Telegram aloqasini tekshirish
 ```
 
-Ma’lumotlar `data/navigator.db` (SQLite) faylida saqlanadi — bot qayta ishga tushganda ballar,
-faol testlar va tarix yo‘qolmaydi. Eski xabarlardagi tugmalar ham ishlashda davom etadi.
+| Muhit o‘zgaruvchisi | Majburiy | Tavsif |
+|---|---|---|
+| `BOT_TOKEN` | ✅ | @BotFather tokeni. Faqat hosting’ning maxfiy Environment Variables bo‘limida yoki `.env` da saqlang |
+| `DB_PATH` | | SQLite fayli (standart: `data/navigator.db`) — doimiy diskda bo‘lishi kerak |
+| `ADMIN_IDS` | | Adminlar Telegram ID lari (savollar importi uchun), vergul bilan |
+| `TZ` | | Vaqt zonasi, masalan `Asia/Tashkent` (test tarixidagi sana/vaqt uchun) |
+| `LOG_LEVEL`, `LOG_FILE` | | Log darajasi (`INFO`) va ixtiyoriy log fayl (aylanuvchi, 3×2 MB) |
+| `CELEBRATION_*` | | Salyut sticker/GIF sozlamalari — `.env.example` ga qarang |
+
+Loglar stdout’ga yoziladi (hosting paneli / `journalctl`). Token loglarda hech qachon ko‘rsatilmaydi
+(tasodifan tushsa ham `***` bilan almashtiriladi). Telegram vaqtincha ishlamasa, bot o‘zi qayta ulanadi.
+
+Ma’lumotlar SQLite faylida saqlanadi — bot qayta ishga tushganda ballar, faol testlar va tarix yo‘qolmaydi.
 
 Testlar: `.venv/bin/pip install -r requirements-dev.txt && .venv/bin/python -m pytest`
 
@@ -83,7 +103,7 @@ yoki admin (`ADMIN_IDS`) botga `.json` faylni `/import` izohi bilan yuboradi:
 
 ```
 navigator/
-  __main__.py      ishga tushirish, DI
+  __main__.py      ishga tushirish, loglar, --check, qayta ulanish
   config.py        .env sozlamalari, qoidalar (10 ball, 30 savol)
   db.py            SQLite sxema
   quiz.py          test/ball biznes-logikasi
@@ -94,4 +114,6 @@ navigator/
   texts.py         o‘zbekcha matnlar
   content/         katalog, generatorlar, JSON savollar
 tests/             unit + end-to-end (soxta Telegram sessiyasi)
+deploy/            server.sh (o'rnatish/boshqarish) + systemd xizmati
+DEPLOY.md          bepul hostingga joylash yo'riqnomasi
 ```

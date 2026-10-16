@@ -1,7 +1,37 @@
-.venv/
-__pycache__/
-*.pyc
+# --- Maxfiy fayllar (hech qachon GitHub'ga yuklanmasin) ---
 .env
-data/
-navigator/assets/generated/
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Python ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyc
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Bot ma'lumotlari va loglar (serverda yaratiladi) ---
+data/
+logs/
+*.log
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+navigator/assets/generated/
+
+# --- Arxivlar va tizim fayllari ---
+*.zip
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Server zaxira nusxalari
+backups/
