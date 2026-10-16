@@ -1,0 +1,33 @@
+# NAVIGATOR Telegram boti uchun systemd xizmati (shablon).
+# deploy/server.sh install buyrug'i __USER__ va __DIR__ ni avtomatik almashtiradi.
+[Unit]
+Description=NAVIGATOR Telegram bot (aiogram, polling)
+Wants=network-online.target
+After=network-online.target
+# Cheksiz qayta urinish (tarmoq uzoq vaqt uzilsa ham taslim bo'lmaydi)
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__DIR__
+# Maxfiy sozlamalar (BOT_TOKEN va boshq.) — faqat root o'qiy oladigan faylda
+EnvironmentFile=/etc/navigator/navigator.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=__DIR__/.venv/bin/python -m navigator
+# Har qanday to'xtashdan keyin 10 soniyada avtomatik qayta ishga tushadi
+Restart=always
+# Konfiguratsiya xatolarida (token yo'q: 2, token rad etildi: 3) behuda qayta urinmaydi
+RestartPreventExitStatus=2 3
+RestartSec=10
+# Yumshoq to'xtatish (aiogram SIGTERM ni to'g'ri qayta ishlaydi)
+KillSignal=SIGTERM
+TimeoutStopSec=30
+# Xavfsizlik va resurs cheklovlari
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+MemoryMax=700M
+
+[Install]
+WantedBy=multi-user.target

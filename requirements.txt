@@ -1,0 +1,4 @@
+# Loyihada haqiqatan ishlatiladigan kutubxonalar (Python 3.10–3.12, x86_64 va ARM serverlar uchun tekshirilgan)
+aiogram==3.31.0
+pillow==12.3.0
+python-dotenv==1.2.4
